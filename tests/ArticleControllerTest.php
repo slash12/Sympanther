@@ -11,7 +11,7 @@ class NewsControllerTest extends WebTestCase
         $client = static::createClient();
         $crawler = $client->request('GET', '/');
 
-        $this->assertCount(2, $crawler->filter('h1'));
+        $this->assertCount(3, $crawler->filter('h1'));
         $this->assertSame(
             ['Lorem ipsum dolo', 
             'Lorem ipsum dolo', 
