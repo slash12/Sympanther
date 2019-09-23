@@ -8,7 +8,7 @@ use App\Repository\ArticleRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class ArticleController extends Controller
+class ArticleController extends AbstractController
 {
     private $articlesRepository;
 

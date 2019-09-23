@@ -2,13 +2,13 @@
 
 namespace App\Tests;
 
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Symfony\Component\Panther\PantherTestCase;
 
-class NewsControllerTest extends WebTestCase
+class ArticleControllerTest extends PantherTestCase
 {
-    public function testNews()
+    public function testArticles()
     {
-        $client = static::createClient();
+        $client = static::createPantherClient();
         $crawler = $client->request('GET', '/');
 
         $this->assertCount(3, $crawler->filter('h1'));
